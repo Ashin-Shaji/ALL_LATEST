@@ -8,7 +8,6 @@ import google.generativeai as palm
 from langchain.llms import GooglePalm
 from fuzzywuzzy import fuzz
 
-st.set_theme('light')
 
 # Initialize session state variables
 if 'session_state' not in st.session_state:
