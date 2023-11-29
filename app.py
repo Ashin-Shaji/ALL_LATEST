@@ -114,7 +114,7 @@ def get_jd_skills_and_exp(jd_text):
     prompt2 = " Return minimum experience in years number only"
 
     skills = get_palm_response(prompt1, jd_text)
-    skills = skills.lower()
+    #skills = skills.lower()
     try:
         skills = ast.literal_eval(skills)
     except:
@@ -216,7 +216,7 @@ else:
             jd_skill_similarity, matched_skills = hybrid_similarity(jd_skills, eval(res_row[3]), threshold)
             Missing_Skills = list(set(jd_skills) - set(eval(res_row[3])))
             additional_skills = list(set(eval(res_row[3])) - set(jd_skills))
-            #matched_skills = list(set(jd_skills) - set(Missing_Skills))
+            #matched_skills = list(set(jd_skills) - set(Missing_Skills)) #change 1
 
             final_list.append(
                 [jd_skills, jd_experience, res_row[0], res_row[3], additional_skills, res_row[5],
