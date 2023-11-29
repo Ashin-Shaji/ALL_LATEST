@@ -150,7 +150,7 @@ st.markdown("<h1 style='text-align: center; color: Blue'>JD & RESUME MATCHING MA
             unsafe_allow_html=True)
 
 st.sidebar.title("Navigation")
-selected_option = st.sidebar.radio("Select an Option", ["Extract JD"])
+selected_option = st.sidebar.radio(["Extract JD"])
 
 jd_skills = ""
 jd_experience = ""
