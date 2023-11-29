@@ -114,7 +114,7 @@ def get_jd_skills_and_exp(jd_text):
     prompt2 = " Return minimum experience in years number only"
 
     skills = get_palm_response(prompt1, jd_text)
-    #skills = skills.lower()
+    skills = skills.lower()
     try:
         skills = ast.literal_eval(skills)
     except:
