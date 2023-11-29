@@ -188,29 +188,26 @@ else:
         st.session_state['session_state']['jd_experience'] = jd_experience
         st.session_state['session_state']['jd_full_text'] = jd_full_text
 
-    try:
-        # Highlight common keywords in 'jd_full_text'
+   # Highlight common keywords in 'jd_full_text'
         highlighted_text = jd_full_text
         highlighted_keywords = set()
-    
+
         for skill in jd_skills:
             if skill.lower() not in highlighted_keywords:
                 highlighted_text = re.sub(rf'\b{re.escape(skill)}\b', f'<span style="background-color: yellow; color: black;">{skill}</span>', highlighted_text, flags=re.IGNORECASE)
                 highlighted_keywords.add(skill.lower())
-    
+
         # Extract the float or integer form of experience from 'jd_experience'
         experience = float(jd_experience)
         experience_int = int(experience)
-    
+
         # Highlight the float or integer form of 'experience' in 'jd_full_text'
         highlighted_text = re.sub(rf'\b{re.escape(str(experience))}\b', f'<span style="background-color: orange; color: black;">{experience}</span>', highlighted_text, flags=re.IGNORECASE)
         highlighted_text = re.sub(rf'\b{re.escape(str(experience_int))}\b', f'<span style="background-color: orange; color: black;">{experience_int}</span>', highlighted_text, flags=re.IGNORECASE)
-    
+
         st.markdown(f"SKILLS REQUIRED: {', '.join(jd_skills)}")
         st.markdown(f"EXPERIENCE REQUIRED: {jd_experience}")
         st.markdown(f"FULL TEXT: {highlighted_text}", unsafe_allow_html=True)
-    except Exception as e:
-        st.error(f"An error occurred: {e}")
   
         #st.write(f"SKILLS REQUIRED: {jd_skills}")
         #st.write(f"EXPERIENCE REQUIRED: {jd_experience}")
