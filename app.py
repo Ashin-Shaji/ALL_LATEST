@@ -145,8 +145,8 @@ st.set_page_config(
 # image = Image.open("log.png")
 # st.image(image, use_column_width=50)
 
-image = Image.open("ho.png").resize((225, 100))
-st.image(image,use_column_width=50)
+image = Image.open("ho.png").resize((250, 100))
+st.image(image,use_column_width=25)
 
 st.markdown("<h1 style='text-align: center; color: Blue'>JD & RESUME MATCHING MATRIX </h1>",
             unsafe_allow_html=True)
