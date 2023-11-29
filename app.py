@@ -142,7 +142,7 @@ st.set_page_config(
         'About': 'This is a header. This is an extremely cool app!'
     }
 )
-image = Image.open("ho.png").resize((238,117))
+image = Image.open("ho.png").resize((245,124))
 st.image(image, use_column_width=50)
 
 st.markdown("<h1 style='text-align: center; color: Blue'>JD & RESUME MATCHING MATRIX </h1>",
