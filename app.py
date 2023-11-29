@@ -7,7 +7,8 @@ import random
 import google.generativeai as palm
 from langchain.llms import GooglePalm
 from fuzzywuzzy import fuzz
-
+[theme]
+base="light"
 
 # Initialize session state variables
 if 'session_state' not in st.session_state:
