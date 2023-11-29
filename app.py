@@ -237,9 +237,13 @@ else:
         final_data['Experience_Tag'] = final_data[['JD_Experience', 'Experience']].apply(
             lambda x: 1 if x['Experience'] >= x['JD_Experience'] else 0, axis=1)
 
-        final_data['Matching_Score'] = final_data[['Skill_Similarity', 'Experience_Tag']].apply(
-            lambda x: (2 * x['Skill_Similarity'] + x['Experience_Tag']) / (2 + 1) if x['Skill_Similarity'] > 0 else 0,axis=1)
+        # final_data['Matching_Score'] = final_data[['Skill_Similarity', 'Experience_Tag']].apply(
+        #     lambda x: (2 * x['Skill_Similarity'] + x['Experience_Tag']) / (2 + 1) if x['Skill_Similarity'] > 0 else 0,axis=1)
 
+        final_data['Matching_Score'] = final_data[['Skill_Similarity', 'Experience_Tag']].apply(
+            lambda x: min((2 * x['Skill_Similarity'] + x['Experience_Tag']) / 3, 1) if x['Skill_Similarity'] > 0 else 0, axis=1)
+
+        
         final_data['Additional_skills'] = final_data['Additional_skills'].apply(
             lambda x: 'No additional skills' if not x else x)
 
