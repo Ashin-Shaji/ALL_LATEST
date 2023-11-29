@@ -142,16 +142,8 @@ st.set_page_config(
         'About': 'This is a header. This is an extremely cool app!'
     }
 )
-# image = Image.open("log.png")
-# st.image(image, use_column_width=50)
-
-# image = Image.open("ho.png").resize((350, 200))
-# st.image(image,use_column_width=25)
-
 image = Image.open("ho.png")
-image = image.resize((int(image.width / 2), int(image.height / 2)))  # Resize the image
-st.image(image)
-
+st.image(image, use_column_width=50)
 
 st.markdown("<h1 style='text-align: center; color: Blue'>JD & RESUME MATCHING MATRIX </h1>",
             unsafe_allow_html=True)
