@@ -120,7 +120,7 @@ def get_jd_skills_and_exp(jd_text):
     except:
         skills = jd_skills_data_prep(skills)
 
-    skills = [skill.replace('&', ',') for skill in skills]
+    #skills = [skill.replace('&', ',') for skill in skills]
 
     try:
         experience = float(get_palm_response(prompt2, jd_text))
