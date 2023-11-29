@@ -198,11 +198,11 @@ else:
                 highlighted_keywords.add(skill.lower())
 
         # Extract the float or integer form of experience from 'jd_experience'
-        experience = float(jd_experience)
+        #experience = float(jd_experience)
         experience_int = int(experience)
 
         # Highlight the float or integer form of 'experience' in 'jd_full_text'
-        highlighted_text = re.sub(rf'\b{re.escape(str(experience))}\b', f'<span style="background-color: orange; color: black;">{experience}</span>', highlighted_text, flags=re.IGNORECASE)
+        #highlighted_text = re.sub(rf'\b{re.escape(str(experience))}\b', f'<span style="background-color: orange; color: black;">{experience}</span>', highlighted_text, flags=re.IGNORECASE)
         highlighted_text = re.sub(rf'\b{re.escape(str(experience_int))}\b', f'<span style="background-color: orange; color: black;">{experience_int}</span>', highlighted_text, flags=re.IGNORECASE)
 
         st.markdown(f"SKILLS REQUIRED: {', '.join(jd_skills)}")
