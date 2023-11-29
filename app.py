@@ -146,7 +146,7 @@ st.set_page_config(
 # st.image(image, use_column_width=50)
 
 image = Image.open("ho.png")
-st.image(image,use_column_width=50)
+st.image(image,use_column_width=100)
 
 st.markdown("<h1 style='text-align: center; color: Blue'>JD & RESUME MATCHING MATRIX </h1>",
             unsafe_allow_html=True)
