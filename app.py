@@ -117,7 +117,7 @@ def get_jd_skills_and_exp(jd_text):
     # prompt1 = " Return python list with only the skill keywords from the given text "
     prompt1 = " Return a python list of all keywords related to skill only from the given text "
     # prompt2 = " Return minimum experience in years number only"
-    prompt2 = " Explicitly search for a number that dentote minimum experience in years and return it from the given text"
+    prompt2 = " Explicitly search for a number that denote minimum experience in years and return only that number from the given text"
 
     skills = get_palm_response(prompt1, jd_text)
     #skills = skills.lower()
