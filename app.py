@@ -113,7 +113,8 @@ def get_palm_response(text, prompt):
 
 
 def get_jd_skills_and_exp(jd_text):
-    prompt1 = " Return python list with skill names only picked from above text"
+    # prompt1 = " Return python list with skill names only picked from above text"
+    prompt1 = " Return python list with only the skill related keywords"
     prompt2 = " Return minimum experience in years number only"
 
     skills = get_palm_response(prompt1, jd_text)
