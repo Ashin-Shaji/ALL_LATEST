@@ -118,8 +118,8 @@ def get_jd_skills_and_exp(jd_text):
     prompt1 = " Return a python list of all keywords related to skill only from the given text "
     # prompt2 = " Return minimum experience in years number only"
     # prompt2 = " Return minimum experience in years number only "
-    prompt2 = " Return minimum experience in years number also get digits ranging from 0 to 1 if the experience is given in months only "
-
+    # prompt2 = " Return minimum experience in years number also get digits ranging from 0 to 1 if the experience is given in months only "
+    prrompt2 = "get only the float form of single minimum digit of experience unless provide experience as 0.0"
     skills = get_palm_response(prompt1, jd_text)
     #skills = skills.lower()
     try:
